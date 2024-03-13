@@ -52,7 +52,7 @@ func main() {
 
 	v1 := h.Group("/v1")
 	{
-		v1.GET("/hello/:name", func(c context.Context, ctx *app.RequestContext) {
+		v1.GET("/hello/:name1", func(c context.Context, ctx *app.RequestContext) {
 			fmt.Fprintf(ctx, "Hi %s, this is the response from Hertz.\n", ctx.Param("name"))
 		})
 	}
